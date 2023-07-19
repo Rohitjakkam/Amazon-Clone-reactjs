@@ -1,6 +1,8 @@
 .checkoutProduct{
     display: flex;
-    background-color: white;
+    /* background-color: white; */
+    margin-top: 20px;
+    margin-bottom: 20px;
 } 
 .checkoutProduct__image{
     object-fit: contain;
