@@ -1,5 +1,3 @@
-
-
 export const initialState ={
     basket: [],
     user:null,
@@ -22,12 +20,13 @@ const reducer = (state ,action)=> {
                 newBasket.splice(index,1);
             }else {
                 console.warn(
-                    'Cant remove product (id:${action.id}) as its no'
+                    `Cant remove product (id:${action.id}) as its no`
                 );
             }
 
-
-            return {...state};
+            return {
+                ...state, basket: newBasket ,
+            };
    
         default:
             return state;
