@@ -2,12 +2,14 @@ import React from 'react'
 import { useStateValue } from './StateProvider';
 import "./Checkout.css"
 import CheckoutProduct from './CheckoutProduct';
+import Subtotal from "./Subtotal";
+import CurrencyFormat from "react-currency-format";
 function Checkout() {
     const[{ basket }]=useStateValue();
   return (
       <div className='checkout'>
         <div className="checkout__left">
-          <img className='checkout__ad' src="https://m.media-amazon.com/images/G/31/img19/AmazonPay/Acko/May21/PC_Dashboar_770x150_02._CB666565828_.jpg" alt="" />
+          <img className='checkout__ad' src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" />
 
             {basket?.length === 0 ? (
                 <div className="">
@@ -30,14 +32,14 @@ function Checkout() {
                     rating={item.rating}
                   />
                   ))}
-        </div>
+                </div>
           )}
-          </div>
+       </div>
           
       {basket.length>0&&(
       <div className="checkout__right">
-        <h1>Hello ji </h1>
-      {/* <Subtotal /> */}
+       
+      <Subtotal />
       </div>
     )}
     </div>
