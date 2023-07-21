@@ -4,7 +4,7 @@ import './App.css';
 import Header from "./Header.js";
 import Home from "./Home.js"
 import Checkout from "./Checkout";
-
+// Main part od app
 function App() {
   return (
     <Router>
