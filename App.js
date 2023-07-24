@@ -12,7 +12,7 @@ function App() {
         <Routes>
         <Route path="/" element={<React.Fragment><Header /><Home /></React.Fragment>} />
         <Route path="/checkout" element={<React.Fragment><Header /><Checkout /></React.Fragment>} />
-        {/* <Route path="/contact" element={} /> */}
+         <Route path="/login" element={<React.Fragment><Login /></React.Fragment> } />
         </Routes>    
       </div>
     </Router>
